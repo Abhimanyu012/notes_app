@@ -38,7 +38,7 @@ const UpdateNotePage = () => {
   };
 
   if (loading) {
-    return <div className="h-40 animate-pulse rounded-2xl bg-white/5" />;
+    return <div className="h-40 animate-pulse rounded-2xl bg-white/20 dark:bg-white/5" />;
   }
 
   if (!note) return null;
@@ -46,11 +46,11 @@ const UpdateNotePage = () => {
   return (
     <div className="space-y-6">
       <div>
-        <p className="text-sm uppercase tracking-[0.2em] text-emerald-200/80">Edit</p>
-        <h2 className="text-3xl font-bold text-white">Update note</h2>
-        <p className="text-slate-300">Make changes to your note and save.</p>
+        <p className="text-sm uppercase tracking-[0.2em] text-emerald-600 dark:text-emerald-200/80">Edit</p>
+        <h2 className="text-3xl font-bold text-slate-900 dark:text-white">Update note</h2>
+        <p className="text-slate-600 dark:text-slate-300">Make changes to your note and save.</p>
       </div>
-      <div className="rounded-2xl border border-white/5 bg-white/5 p-6 shadow-sm">
+      <div className="rounded-2xl border border-white/10 dark:border-white/5 bg-white/40 dark:bg-slate-950/30 backdrop-blur-xl p-6 shadow-sm dark:shadow-lg">
         <NoteForm initialValues={note} onSubmit={handleUpdate} actionLabel="Save changes" />
       </div>
     </div>
